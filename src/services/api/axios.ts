@@ -1,9 +1,9 @@
 import axios from "axios";
 ////________________________________________________________________
-const publicURL = "http://thedarkknl9ht-001-site1.ftempurl.com/api";
+const publicURL = "https://thedarkknl9ht-001-site1.ftempurl.com/api";
 
 const baseURL =
-  !process.env.NODE_ENV || process.env.NODE_ENV === "developmentx"
+  !process.env.NODE_ENV || process.env.NODE_ENV === "development"
     ? "http://localhost:5167/api"
     : publicURL;
 ////________________________________________________________________
