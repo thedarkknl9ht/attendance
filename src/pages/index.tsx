@@ -15,7 +15,9 @@ import Attendance from "./modules/attendance";
 ////__________________________________________________________________
 const Pages = () => {
   return (
-    <BrowserRouter>
+    <div>
+      <div>testing</div>
+      <BrowserRouter>
       <Routes>
         {/************** Authentication **************/}
         <Route path="/login" element={<Auth />} />
@@ -31,6 +33,7 @@ const Pages = () => {
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 };
 
