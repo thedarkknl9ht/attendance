@@ -1,32 +1,7 @@
 import i18n from "~/i18n";
 
-import { IInventory, IProcurement, ISales } from "~/library/components";
-
-const iconStyle = { color: "#999" };
-
 export const modules = [
-  {
-    key: "inventory",
-    icon: <IInventory style={iconStyle} />,
-    children: [
-      { key: ["inventory", "cards"], label: "cards" },
-      { key: ["inventory", "transactions"], label: "transactions" },
-      { key: ["inventory", "reports"], label: "reports" },
-    ],
-  },
-  {
-    key: "procurement",
-    icon: <IProcurement style={iconStyle} />,
-    children: [{ key: ["procurement", "cards"], label: "cards" }],
-  },
-  {
-    key: "sales",
-    icon: <ISales style={iconStyle} />,
-    children: [
-      { key: ["sales", "cards"], label: "cards" },
-      { key: ["sales", "transactions"], label: "transactions" },
-    ],
-  },
+ 
 ];
 
 export const generalPrivileges = [

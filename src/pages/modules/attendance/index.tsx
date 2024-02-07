@@ -25,7 +25,7 @@ const Attendance = () => {
   const { data: employee, isFetching } = useQuery({
     queryKey: ["EMPLOYEE", auth?.userID],
     queryFn: (key) => fetchEmployee(key),
-    initialData: { location: "" },
+    initialData: {},
     refetchOnWindowFocus: true,
   });
 
@@ -47,7 +47,7 @@ const Attendance = () => {
           return {};
         });
 
-    return { location: "" };
+    return {};
   };
 
   function setCurrent(location: any) {
@@ -72,19 +72,36 @@ const Attendance = () => {
     return 0;
   };
   /////////////////////////////////////////////////////////////////////////
-  const workLocation = {
-    lat: Number(employee?.location?.location?.split(",")[0]),
-    lng: Number(employee?.location?.location?.split(",")[1]),
-    title: "Work Location",
-    circle: { radius: 804.672 },
+  const getMarkers = () => {
+    let markers: any = [];
+    let allLocations = employee?.employeesLocations;
+    allLocations
+      ?.filter((e: any) => !e.location.hold)
+      .map((ele: any) =>
+        markers.push({
+          locationID: ele.locationID,
+          lat: Number(ele.location?.location?.split(",")[0]),
+          lng: Number(ele.location?.location?.split(",")[1]),
+          title: ele.location.locationName,
+          circle: { radius: 804.672 },
+        })
+      );
+
+    return markers;
   };
 
-  const allowAttend = calculateDistance(currentLocation, workLocation) < 0.5;
+  const workLocation = getMarkers().find(
+    (e: any) => calculateDistance(currentLocation, e) < 0.5
+  );
 
+  const allowAttend =
+    currentLocation &&
+    workLocation &&
+    calculateDistance(currentLocation, workLocation) < 0.5;
   /////////////////////////////////////////////////////////////////////////
-  const form = {
+  const form = workLocation && {
     employeeID: employee.employeeID,
-    locationID: employee.locationID,
+    locationID: workLocation.locationID,
     attendLocation: `${currentLocation.lat},${currentLocation.lng}`,
   };
 
@@ -100,7 +117,7 @@ const Attendance = () => {
   return (
     !isFetching && (
       <React.Fragment>
-        <Maps toggle={{ open: true }} markers={[workLocation]} />
+        <Maps toggle={{ open: true }} markers={getMarkers()} />
         <Space style={{ padding: 20 }} split={<Divider type="vertical" />}>
           {allowAttend && (
             <Button onClick={handleSubmit}>{i18n.t("Attend")}</Button>
