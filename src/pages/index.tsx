@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 ////__________________________________________________________________
 import Auth from "~/auth";
 ////__________________________________________________________________
@@ -15,7 +15,7 @@ import Attendance from "./modules/attendance";
 ////__________________________________________________________________
 const Pages = () => {
   return (
-      <HashRouter>
+    <HashRouter>
       <Routes>
         {/************** Authentication **************/}
         <Route path="/login" element={<Auth />} />
