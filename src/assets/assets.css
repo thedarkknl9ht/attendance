@@ -1,0 +1,116 @@
+/*******************************************
+                Custom Design            
+********************************************/
+/* General */
+[hidden] {
+    display: none !important;
+}
+
+/* Form Label */
+.ant-form-item-no-colon{
+    width: 100%;
+}
+/* Input */
+input[disabled],textarea[disabled]{
+    background-color: white !important;
+}
+
+/* Select */
+.ant-select .ant-select-clear svg{
+    margin-top: -3px;
+    margin-inline-start: -4px;
+    width: 14px;height: 14px;
+    fill: #999;
+}
+
+table .ant-select-disabled .ant-select-selector {
+    color: rgb(0, 0, 0, .4) !important;
+    background-color: white !important;
+    opacity: 1 !important;
+    cursor: default !important;
+}
+
+.ant-select-disabled .ant-select-selector {
+    color: rgb(0, 0, 0, .4) !important;
+    background-color: white !important;
+    opacity: 1 !important;
+    cursor: default !important;
+}
+
+/* ReadOnly Input*/
+.ant-form-item-control-input,
+input:read-only {
+    cursor: default !important;
+    color: rgb(0, 0, 0, .4) !important;
+}
+
+/* Number */
+.ant-input-number-affix-wrapper-disabled ,.ant-input-number-disabled {
+    background-color: white !important;
+}
+
+/* Datepicker */
+.ant-picker-disabled {
+    background-color: white !important;
+}
+
+/* Dropdown Table */
+.dropdown-table [role="listbox"] {
+    display: table !important;
+    width: 100%;
+}
+
+.dropdown-table [role="listbox"] [role="option"] {
+    display: table-row;
+}
+
+.dropdown-table [role="listbox"] [role="option"] .table-cell {
+    display: table-cell;
+    padding: 5px;
+    min-width: 100px;
+}
+
+.dropdown-table [role="listbox"] [role="option"] .table-cell[data-header="true"] {
+    cursor: default;
+    border-bottom: 1px solid whitesmoke;
+}
+
+/* Button */
+.ant-btn-sm {
+    font-size: smaller !important;
+}
+
+/* Table Toolbar */
+.table-toolbar {
+    display: flex;
+    margin: 10px 0;
+}
+
+.table-toolbar .table-toolbar-item {
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+.table-toolbar .table-toolbar-item:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.table-toolbar .table-toolbar-item[hidden] {
+    display: none;
+}
+
+.table-toolbar .table-toolbar-item svg {
+    margin-inline-end: 5px;
+    vertical-align: middle;
+    fill: #666;
+    margin-top: 5px;
+}
+
+.table-toolbar .table-toolbar-separator::after {
+    content: "";
+    padding-bottom: 5px;
+    border-inline-end: 1px solid silver;
+    margin-inline-start: 5px;
+    margin-inline-end: 5px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+.ant-form {
+    padding: auto;
+}
+
+.ant-form-item-explain-error {
+    font-size: 12px;
+}
+
+.rc-virtual-list-holder-inner {
+    overflow: hidden !important;
+}
+
+[data-type="section"][data-hidden="true"] {
+    display: none;
+}

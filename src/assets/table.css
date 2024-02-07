@@ -1,0 +1,92 @@
+td[data-editing="true"] {
+    padding: 3px !important;
+}
+
+td[data-editing="false"] {
+    padding-inline-start: 9px !important;
+}
+
+tr:has([data-editing="true"]) td {
+    background-color: rgb(230, 244, 255) !important;
+}
+
+/* Table Input */
+td[data-editing="true"] input {
+    margin: 0 !important;
+    outline: none;
+    border-radius: 4px !important;
+    padding-inline-start: 5px;
+}
+
+/* Table Select */
+td[data-editing="true"] .ant-select {
+    width: 100%;
+    border-radius: 4px !important;
+}
+
+td[data-editing="true"] .ant-select-selector {
+    text-overflow: ellipsis;
+    padding-inline-end: 20px;
+    border-radius: 4px !important;
+    padding-inline-start: 6px !important
+}
+
+/* Table Number */
+td[data-editing="true"] .ant-input-number {
+    width: 100%;
+    border-radius: 4px !important;
+}
+
+td[data-editing="true"] .ant-input-number input {
+    padding-inline-start: 5px !important;
+}
+
+/* Table Number */
+td[data-editing="true"] .ant-picker {
+    width: 100%;
+    border-radius: 4px !important;
+}
+/* Table Checkbox */
+td[data-editing="true"] > .ant-checkbox-wrapper{
+    margin-inline-start: 6px;
+}
+
+/******************/
+th .col-resize {
+    cursor: "e-resize" !important;
+    visibility: hidden;
+}
+
+
+th:hover .col-resize {
+    cursor: "e-resize" !important;
+    visibility: visible;
+}
+
+th .col-resize::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 100%;
+    left: 0;
+    top:0;
+    margin-inline-start: 3px;
+    border-inline-end: 5px solid rgb(240, 240, 240);
+}
+
+th .col-title {
+    flex-grow: 1;
+}
+
+[draggable]:active {
+    opacity: .5;
+    background-color: whitesmoke;
+}
+
+.ant-table-row-selected td {
+    border-bottom: 1px solid white !important;
+}
+
+.ant-table-column-title {
+    position: initial !important;
+}

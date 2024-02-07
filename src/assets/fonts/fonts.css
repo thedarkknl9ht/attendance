@@ -1,0 +1,127 @@
+@import  'fontawesome/css/all.css';
+@import  'lineawesome/css/line-awesome.css';
+
+
+@font-face {
+    font-family: "Samim";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("Samim/Samim.ttf");
+}
+
+@font-face {
+    font-family: "Samima";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("Samim/Samim-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: "DIN NEXT";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("DINNext/DINNextLTArabic-Regular-2.ttf");
+}
+
+@font-face {
+    font-family: "DIN NEXT";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("DINNext/DINNextLTArabic-Bold-3.ttf");
+}
+
+@font-face {
+    font-family: "Jory";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("DG Jory/DG-Jory-Light.ttf");
+}
+
+@font-face {
+    font-family: "Mikhak";
+    font-style: normal;
+    font-weight: 200;
+    font-display: block;
+    src: url("Mikhak/Mikhak-Light.ttf");
+}
+
+@font-face {
+    font-family: "Mikhak";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("Mikhak/Mikhak-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Mikhak";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("Mikhak/Mikhak-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Dima";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("Dima-Mitra/Dima-Mitra.ttf");
+}
+
+
+@font-face {
+    font-family: "JANNA";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("Janna/Janna LT Regular.ttf");
+}
+
+@font-face {
+    font-family: "JANNA";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("Janna/Janna LT Bold.ttf");
+}
+
+@font-face {
+    font-family: "Dubai";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("dubai/Dubai-Light.otf");
+}
+
+
+@font-face {
+    font-family: "Dubai";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("dubai/Dubai-Bold.otf");
+}
+
+
+@font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("vazir/Vazir-Light.ttf");
+}
+
+@font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("vazir/Vazir-Bold.ttf");
+}

@@ -1,0 +1,4 @@
+{
+  "table": { "bordered": true, "size": "small" },
+  "description": { "bordered": true, "size": "small" }
+}

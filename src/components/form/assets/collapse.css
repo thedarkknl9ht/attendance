@@ -1,0 +1,24 @@
+.ant-collapse {
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.ant-collapse-header {
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.ant-collapse-item.show-more .ant-form-item-hidden {
+    display: block !important;
+}
+
+.ant-collapse-item .collapse-extra svg {
+    fill: rgb(200, 200, 200) !important
+}
+
+.ant-collapse-item .collapse-extra svg:hover {
+    fill: rgb(150, 150, 150) !important
+}
+
+.ant-collapse-item.hide-title .ant-collapse-header {
+    display: none !important;
+}

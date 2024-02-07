@@ -1,0 +1,80 @@
+{
+  "invoiceID": "00000125",
+  "invoiceDate": "05-01-2024",
+  "invoiceTime": "05:00PM",
+  "customerID": "0005",
+  "customerName": "Mustafa Ahmed",
+  "shippingAddress": "Aqiq, Bahah, Saudi Arabia",
+  "totalInvoice": 10000,
+  "currency": "SAR",
+  "paymentType": "VISA",
+  "status": "Valid",
+  "invoiceDetails": [
+    {
+      "key": 1,
+      "productID": "001",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 1",
+      "productCategoryID": "CAT1",
+      "productCategoryName": "Category 1",
+      "group": "001",
+      "quantity": "2",
+      "amount": "100"
+    },
+    {
+      "key": 2,
+      "productID": "002",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 2",
+      "productCategoryID": "CAT1",
+      "productCategoryName": "Category 1",
+      "group": "001",
+      "quantity": "5",
+      "amount": "150"
+    },
+    {
+      "key": 3,
+      "productID": "003",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 3",
+      "productCategoryID": "CAT1",
+      "productCategoryName": "Category 1",
+      "group": "002",
+      "quantity": "1",
+      "amount": "50"
+    },
+    {
+      "key": 4,
+      "productID": "004",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 4",
+      "productCategoryID": "CAT2",
+      "productCategoryName": "Category 2",
+      "group": "002",
+      "quantity": "2",
+      "amount": "100"
+    },
+    {
+      "key": 5,
+      "productID": "005",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 5",
+      "productCategoryID": "CAT2",
+      "productCategoryName": "Category 2",
+      "group": "003",
+      "quantity": "3",
+      "amount": "90"
+    },
+    {
+      "key": 6,
+      "productID": "006",
+      "product": { "productType": "Inventory" },
+      "productName": "Product 6",
+      "productCategoryID": "CAT2",
+      "productCategoryName": "Category 2",
+      "group": "003",
+      "quantity": "1",
+      "amount": "20"
+    }
+  ]
+}

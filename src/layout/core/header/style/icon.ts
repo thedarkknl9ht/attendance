@@ -1,0 +1,1 @@
+export const iconStyle = { color: "#777", fontSize: "18px" };

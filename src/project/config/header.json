@@ -1,0 +1,14 @@
+{
+  "app-title": "IKnology",
+  "app-name": "IKnology",
+  "app-menu": "default",
+  "allowItems": false,
+  "allowHelp": false,
+  "alowNotifications": false,
+  "allowWarnings": false,
+  "allowAabout": false,
+  "allowUser": false,
+  "allowSearch": false,
+  "allowSettings": true,
+  "allowExtra": false
+}
