@@ -75,11 +75,11 @@ const Attendance = () => {
   const workLocation = {
     lat: Number(employee?.location?.location?.split(",")[0]),
     lng: Number(employee?.location?.location?.split(",")[1]),
+    title: "Work Location",
     circle: { radius: 804.672 },
   };
 
-  const allowAttend =
-    calculateDistance(currentLocation, workLocation) < 0.5;
+  const allowAttend = calculateDistance(currentLocation, workLocation) < 0.5;
 
   /////////////////////////////////////////////////////////////////////////
   const form = {
