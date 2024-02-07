@@ -8,7 +8,6 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 ////________________________________________________________________
 import { useAuth, useAxios } from "~/library/hooks";
 import { Alert } from "~/library/components";
-import { Maps } from "~/components/ui/maps";
 
 /**
  * * Login Page
@@ -113,7 +112,6 @@ const Auth = () => {
           </Form.Item>
         </Form>
       </ConfigProvider>
-      <Maps toggle={{ open: true }} />
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import axios from "axios";
 ////________________________________________________________________
-const publicURL = "http://pos.iknology.com:3000/api";
+const publicURL = "http://thedarkknl9ht-001-site1.ftempurl.com/api";
 
 const baseURL =
-  !process.env.NODE_ENV || process.env.NODE_ENV === "development"
+  !process.env.NODE_ENV || process.env.NODE_ENV === "developmentx"
     ? "http://localhost:5167/api"
     : publicURL;
 ////________________________________________________________________
