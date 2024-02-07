@@ -1,7 +1,5 @@
 import { useState, useMemo, createContext, ReactNode } from "react";
 ////________________________________________________________________
-import Cookies from "universal-cookie";
-////________________________________________________________________
 import { useQuery } from "@tanstack/react-query";
 ////________________________________________________________________
 import { useAxios } from "~/hooks/useAxios";
@@ -11,8 +9,6 @@ const authContext = createContext({});
 const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   ////________________________________________________________________
-  const cookies = new Cookies();
-  ////________________________________________________________________
   const axios = useAxios();
 
   const [entity, setEntitiy] = useState<any>({});
@@ -20,16 +16,19 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [filterEntities, setFilterEntities] = useState<any>([]);
   ////________________________________________________________________
   const { data: auth, refetch } = useQuery({
-    queryKey: ["AUTHENTICATE", cookies.get("auth")],
+    queryKey: ["AUTHENTICATE", localStorage.getItem("u")],
     queryFn: (key) => authenticate(key),
     initialData: {},
     refetchOnWindowFocus: true,
   });
 
   const authenticate = async ({ queryKey }: { queryKey: any }) => {
-    if (queryKey) {
+    if (queryKey && localStorage.getItem("u") !== null) {
       const response = await axios
-        .fetch("auth/authenticate", { withCredentials: true })
+        .fetch("auth/authenticate", {
+          withCredentials: true,
+          params: { userID: localStorage.getItem("u") },
+        })
         .then((response) => {
           setEntitiy(response?.entity);
 
@@ -55,10 +54,11 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     return {};
   };
   ////________________________________________________________________
-  const authStatus = !isLoaded ? "loading" : auth?.userID ? "valid" : "invalid";
+  const authStatus =localStorage.getItem("u") && !isLoaded ? "loading" : auth?.userID ? "valid" : "invalid";
   ////________________________________________________________________
-  const login = () => {
-    refetch();
+  const login = (userID: string) => {
+    localStorage.setItem("u", userID);
+    window.location.reload();
   };
 
   const logout = () => {

@@ -41,7 +41,7 @@ const Auth = () => {
       });
 
     if (response?.userID) {
-      login(response);
+      login(response?.userID);
     }
   };
 
